@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app dark class="all">
     <v-navigation-drawer
       v-model="drawer"
       :mini-variant="miniVariant"
@@ -75,7 +75,7 @@
               mdi-repeat
             </v-icon>
           </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
+          <v-list-item-title>Estoy aquí (click me)</v-list-item-title>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
@@ -100,21 +100,23 @@ export default {
           to: '/'
         },
         {
-          icon: ' mdi-calendar-check',
-          title: 'Eventos',
-          to: '/inspire'
-        },
-        {
           icon: ' mdi-format-list-bulleted',
-          title: 'Lista',
-          to: '/list'
+          title: 'Narrativa',
+          to: '/content'
         }
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js'
+      title: 'Rick and Morty'
     }
   }
 }
 </script>
+<style  scoped>
+ .all{
+   background-image: url(https://i.imgur.com/6DjNM5C.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+ }
+</style>
